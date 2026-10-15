@@ -1,0 +1,56 @@
+name: ivorybiz_app
+description: Application mobile Ivorybiz — boutique en ligne connectée à WooCommerce.
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Gestion d'état partagé dans toute l'app (panier, infos client, etc.)
+  provider: ^6.1.2
+
+  # Appels API vers WooCommerce et notre backend PHP
+  dio: ^5.4.3
+
+  # Sauvegarde locale (infos client après 1ère commande)
+  shared_preferences: ^2.2.3
+
+  # Géolocalisation GPS (usage marketing)
+  geolocator: ^12.0.0
+  permission_handler: ^11.3.1
+
+  # Affichage des images produits depuis WooCommerce (avec cache)
+  cached_network_image: ^3.3.1
+
+  # Formatage des prix (ex: 20 585 CFA)
+  intl: ^0.19.0
+
+  # Ouvre la fiche produit / paiement dans une WebView si besoin plus tard
+  webview_flutter: ^4.8.0
+
+  cupertino_icons: ^1.0.6
+  url_launcher: ^6.3.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  flutter_launcher_icons: ^0.14.3
+
+flutter_launcher_icons:
+  android: true
+  ios: false
+  image_path: assets/images/logo.png
+  background_color: "#0044CC"
+  adaptive_icon_background: "#0044CC"
+  adaptive_icon_foreground: assets/images/logo.png
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
